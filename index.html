@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Test Application</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .warning { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Security Test Application</h1>
+    <p class="warning">Use this only on your own systems or with explicit permission!</p>
+    
+    <h2>Test Forms</h2>
+    <form action="/login" method="POST">
+        <h3>Login Form</h3>
+        <p>Username: <input type="text" name="username"></p>
+        <p>Password: <input type="password" name="password"></p>
+        <input type="submit" value="Login">
+    </form>
+    
+    <form action="/search" method="GET">
+        <h3>Search Form</h3>
+        <p>Search: <input type="text" name="query"></p>
+        <input type="submit" value="Search">
+    </form>
+    
+    <h2>Test Pages</h2>
+    <ul>
+        <li><a href="/admin.php">Admin page (protected)</a></li>
+        <li><a href="/info.php">PHP Info page</a></li>
+        <li><a href="/old/">Old version (vulnerable)</a></li>
+    </ul>
+</body>
+</html>
